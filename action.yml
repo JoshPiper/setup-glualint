@@ -1,0 +1,16 @@
+name: "Setup GLuaLint"
+description: "Set up GLuaLint for linting a GLua project."
+author: "John Internet <internet@doctor-internet.dev>"
+branding:
+  icon: check
+  color: blue
+
+runs:
+  using: node12
+  main: "dist/index.js"
+
+inputs:
+  version:
+    description: "Linter Version to download."
+    required: false
+    default: 1.16.1
