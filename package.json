@@ -1,0 +1,31 @@
+{
+	"name": "setup-glualint",
+	"version": "0.0.0",
+	"description": "Set up GLuaLint for linting a GLua project.",
+	"main": "src/index.js",
+	"scripts": {
+		"clean-dist": "((ls dist > /dev/null 2>&1) && rm -r ./dist) || true",
+		"clean-modules": "((ls node_modules > /dev/null 2>&1) && rm -r ./node_modules) || true",
+		"clean": "npm run clean-dist && npm run clean-modules",
+		"compile": "ncc build src/index.js --license licenses.txt",
+		"build": "npm run clean && npm i && npm run compile"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JoshPiper/setup-glualint.git"
+	},
+	"author": "Josh Piper <internet@doctor-intenet.dev>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JoshPiper/setup-glualint/issues"
+	},
+	"homepage": "https://github.com/JoshPiper/setup-glualint#readme",
+	"dependencies": {
+		"@actions/core": "^1.6.0",
+		"@actions/tool-cache": "^1.7.1",
+		"semver": "^7.3.5"
+	},
+	"devDependencies": {
+		"@vercel/ncc": "^0.33.3"
+	}
+}
