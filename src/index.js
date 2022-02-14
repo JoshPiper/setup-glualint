@@ -3,7 +3,11 @@ const tc = require("@actions/tool-cache")
 const {satisfies} = require("semver")
 
 async function main(){
-	const version = core.getInput('version', {required: false, trimWhitespace: true}) ?? "1.16.1"
+	let version = core.getInput('version', {required: false, trimWhitespace: true})
+	if (version === "" || version === null || version === undefined){
+		version = "1.16.1"
+	}
+
 	let platform
 	switch (process.platform){
 		case "win32":
