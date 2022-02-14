@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/JoshPiper/setup-glualint/compare/v0.2.0...v0.2.1) (2022-02-14)
+
+
+### Bug Fixes
+
+* Only set the default version if empty. ([029f0c2](https://github.com/JoshPiper/setup-glualint/commit/029f0c2c73fe204c5069e955da583611028e322c))
+
+
+
 # [0.2.0](https://github.com/JoshPiper/setup-glualint/compare/v0.1.0...v0.2.0) (2022-02-14)
 
 

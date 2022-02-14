@@ -8632,7 +8632,11 @@ const tc = __nccwpck_require__(7784)
 const {satisfies} = __nccwpck_require__(1383)
 
 async function main(){
-	const version = core.getInput('version', {required: false, trimWhitespace: true}) ?? "1.16.1"
+	let version = core.getInput('version', {required: false, trimWhitespace: true})
+	if (version === "" || version === null || version === undefined){
+		version = "1.16.1"
+	}
+
 	let platform
 	switch (process.platform){
 		case "win32":
