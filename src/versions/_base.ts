@@ -31,7 +31,7 @@ export default class LintVersion {
 		const downloadFolder = await extractZip(downloadPath)
 		const downloadSubfolder = this.getInternalFolder(version)
 
-		return `${downloadFolder}`
+		return `${downloadFolder}/${downloadSubfolder}`
 	}
 
 	static getCodeDownloadURL(version: SemVer): string {
