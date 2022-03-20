@@ -7,12 +7,8 @@ export default class Version1p1p0 extends LintVersion {
     exact = new SemVer("1.1.0")
 
     static async setup(version, platform){
-        const downloadURL = this.getCodeDownloadURL(version)
-        console.log(`downloading ${downloadURL}`)
-        const downloadPath = await downloadTool(downloadURL)
-        console.log(`downloaded ${downloadPath}`)
-        const downloadFolder = await extractZip(downloadPath)
-        console.log(`extracted ${downloadFolder}`)
+        const downloadFolder = this.download(version)
         console.log(execSync(`ls ${downloadFolder}`).toString())
+        console.log(execSync(`cabel build`).toString())
     }
 }
