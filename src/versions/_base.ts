@@ -1,4 +1,5 @@
 import {SemVer, gt, lt, eq} from "semver"
+import {downloadTool, extractZip} from "@actions/tool-cache"
 
 export default class LintVersion {
 	static minimum: SemVer|null
@@ -24,7 +25,20 @@ export default class LintVersion {
 		throw "Not Implemented"
 	}
 
+	static async download(version: SemVer): Promise<string> {
+		const downloadURL = this.getCodeDownloadURL(version)
+		const downloadPath = await downloadTool(downloadURL)
+		const downloadFolder = await extractZip(downloadPath)
+		const downloadSubfolder = this.getInternalFolder(version)
+
+		return `${downloadFolder}/${downloadSubfolder}`
+	}
+
 	static getCodeDownloadURL(version: SemVer): string {
 		return `https://github.com/FPtje/GLuaFixer/archive/refs/tags/${version}.zip`
+	}
+
+	static getInternalFolder(version: SemVer): string {
+		return `GluaFixer-${version}`
 	}
 }
