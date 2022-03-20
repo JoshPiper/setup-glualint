@@ -8628,10 +8628,14 @@ var Version1p1p0 = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             var downloadFolder;
             return __generator(this, function (_a) {
-                downloadFolder = this.download(version);
-                console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
-                console.log((0, child_process_1.execSync)("cabel build").toString());
-                return [2 /*return*/];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.download(version)];
+                    case 1:
+                        downloadFolder = _a.sent();
+                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
+                        console.log((0, child_process_1.execSync)("cabel build").toString());
+                        return [2 /*return*/];
+                }
             });
         });
     };

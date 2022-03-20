@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/JoshPiper/setup-glualint/compare/v0.4.0...v0.4.1) (2022-03-20)
+
+
+### Bug Fixes
+
+* Needs to be awaited. ([0a8515e](https://github.com/JoshPiper/setup-glualint/commit/0a8515e2c3904d2df5e28a86de0478735527155d))
+
+
+
 # [0.4.0](https://github.com/JoshPiper/setup-glualint/compare/v0.3.2...v0.4.0) (2022-03-20)
 
 
@@ -39,15 +48,6 @@
 
 * Add versions. ([46cd395](https://github.com/JoshPiper/setup-glualint/commit/46cd39506860fced8c2f05a7d08566cebee7e994))
 * Use a version class. ([daae1ec](https://github.com/JoshPiper/setup-glualint/commit/daae1ec62bf0d54f0d2c35754a85d1c1d2ad407f))
-
-
-
-## [0.2.1](https://github.com/JoshPiper/setup-glualint/compare/v0.2.0...v0.2.1) (2022-02-14)
-
-
-### Bug Fixes
-
-* Only set the default version if empty. ([029f0c2](https://github.com/JoshPiper/setup-glualint/commit/029f0c2c73fe204c5069e955da583611028e322c))
 
 
 
