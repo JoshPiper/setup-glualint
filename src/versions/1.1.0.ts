@@ -9,6 +9,7 @@ export default class Version1p1p0 extends LintVersion {
     static async setup(version, platform){
         const downloadFolder = await this.download(version)
         console.log(execSync(`ls ${downloadFolder}`).toString())
+        console.log(execSync(`ls ${downloadFolder}/${this.getInternalFolder(version)}`).toString())
         console.log(execSync(`cabel build`).toString())
     }
 }
