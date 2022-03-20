@@ -24,7 +24,7 @@ export default class LintVersion {
 		throw "Not Implemented"
 	}
 
-	getCodeDownloadURL(version: SemVer): string {
+	static getCodeDownloadURL(version: SemVer): string {
 		return `https://github.com/FPtje/GLuaFixer/archive/refs/tags/${version}.zip`
 	}
 }
