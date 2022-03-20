@@ -8,7 +8,14 @@ export default class Version1p1p0 extends LintVersion {
 
     static async setup(version, platform){
         const downloadFolder = await this.download(version)
-        console.log(execSync(`ls ${downloadFolder}`).toString())
+        console.log(execSync(`ls ${downloadFolder}`, {
+            encoding: "utf-8"
+        }))
+
+        console.log(execSync("cabal update", {
+            cwd: downloadFolder,
+            encoding: "utf-8"
+        }))
         console.log(execSync(`cabal build`, {
             cwd: downloadFolder,
             encoding: "utf-8"
