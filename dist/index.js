@@ -8633,7 +8633,7 @@ var Version1p1p0 = /** @class */ (function (_super) {
                     case 1:
                         downloadFolder = _a.sent();
                         console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
-                        console.log((0, child_process_1.execSync)("cabel build", {
+                        console.log((0, child_process_1.execSync)("cabal build", {
                             cwd: downloadFolder,
                             encoding: "utf-8"
                         }));

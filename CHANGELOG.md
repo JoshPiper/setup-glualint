@@ -1,3 +1,12 @@
+## [0.4.4](https://github.com/JoshPiper/setup-glualint/compare/v0.4.3...v0.4.4) (2022-03-20)
+
+
+### Bug Fixes
+
+* Cabal, not cabel. ([bff10d8](https://github.com/JoshPiper/setup-glualint/commit/bff10d8203eb2c536beb03158c4a33762c814a3e))
+
+
+
 ## [0.4.3](https://github.com/JoshPiper/setup-glualint/compare/v0.4.2...v0.4.3) (2022-03-20)
 
 
@@ -33,15 +42,6 @@
 
 * Add download and getInternalFolder to base. ([5134f4a](https://github.com/JoshPiper/setup-glualint/commit/5134f4a7828270f6598ef161f3040fbffbaf6e14))
 * Build gluafixer. ([68f3541](https://github.com/JoshPiper/setup-glualint/commit/68f354108e69adf8878b2c5b1a179887e57830e1))
-
-
-
-## [0.3.2](https://github.com/JoshPiper/setup-glualint/compare/v0.3.1...v0.3.2) (2022-03-20)
-
-
-### Bug Fixes
-
-* Decode the buffer. ([7db9bed](https://github.com/JoshPiper/setup-glualint/commit/7db9bed9ce7f50fddc611e9e6ea43853df21495b))
 
 
 
