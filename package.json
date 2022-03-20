@@ -10,7 +10,7 @@
     "clean": "yarn run clean-dist && yarn run clean-modules && yarn run clean-ts",
 
     "transpile": "tsc src/index.ts --outDir src_ts/",
-    "compile": "ncc build src/index.js --license licenses.txt",
+    "compile": "ncc build src_ts/index.js --license licenses.txt",
 
     "build": "yarn run clean && yarn install && yarn run transpile && yarn run compile"
   },
