@@ -39,6 +39,6 @@ export default class LintVersion {
 	}
 
 	static getInternalFolder(version: SemVer): string {
-		return `GluaFixer-${version}`
+		return `GLuaFixer-${version}`
 	}
 }
