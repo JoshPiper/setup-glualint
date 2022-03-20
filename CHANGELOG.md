@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/JoshPiper/setup-glualint/compare/v0.3.0...v0.3.1) (2022-03-20)
+
+
+### Bug Fixes
+
+* Properly await. ([4c116c5](https://github.com/JoshPiper/setup-glualint/commit/4c116c5855fc81c4cd6cf6b9ea015b14de2fc258))
+
+
+
 # [0.3.0](https://github.com/JoshPiper/setup-glualint/compare/v0.2.1...v0.3.0) (2022-03-20)
 
 

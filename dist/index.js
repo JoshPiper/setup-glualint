@@ -8627,13 +8627,20 @@ var Version1p1p0 = /** @class */ (function (_super) {
     }
     Version1p1p0.setup = function (version, platform) {
         return __awaiter(this, void 0, void 0, function () {
-            var downloadPath, downloadFolder;
+            var downloadURL, downloadPath, downloadFolder;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, (0, tool_cache_1.downloadTool)(this.getCodeDownloadURL(version))];
+                    case 0:
+                        downloadURL = this.getCodeDownloadURL(version);
+                        console.log("downloading ".concat(downloadURL));
+                        return [4 /*yield*/, (0, tool_cache_1.downloadTool)(downloadURL)];
                     case 1:
                         downloadPath = _a.sent();
-                        downloadFolder = (0, tool_cache_1.extractZip)(downloadPath);
+                        console.log("downloaded ".concat(downloadPath));
+                        return [4 /*yield*/, (0, tool_cache_1.extractZip)(downloadPath)];
+                    case 2:
+                        downloadFolder = _a.sent();
+                        console.log("extracted ".concat(downloadFolder));
                         console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)));
                         return [2 /*return*/];
                 }
