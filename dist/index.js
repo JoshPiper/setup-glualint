@@ -8632,7 +8632,13 @@ var Version1p1p0 = /** @class */ (function (_super) {
                     case 0: return [4 /*yield*/, this.download(version)];
                     case 1:
                         downloadFolder = _a.sent();
-                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
+                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder), {
+                            encoding: "utf-8"
+                        }));
+                        console.log((0, child_process_1.execSync)("cabal update", {
+                            cwd: downloadFolder,
+                            encoding: "utf-8"
+                        }));
                         console.log((0, child_process_1.execSync)("cabal build", {
                             cwd: downloadFolder,
                             encoding: "utf-8"
