@@ -4,11 +4,15 @@
   "description": "Set up GLuaLint for linting a GLua project.",
   "main": "src/index.js",
   "scripts": {
+    "clean-ts": "((ls dist > /dev/null 2>&1) && rm -r ./src_ts) || true",
     "clean-dist": "((ls dist > /dev/null 2>&1) && rm -r ./dist) || true",
     "clean-modules": "((ls node_modules > /dev/null 2>&1) && rm -r ./node_modules) || true",
-    "clean": "npm run clean-dist && npm run clean-modules",
+    "clean": "yarn run clean-dist && yarn run clean-modules && yarn run clean-ts",
+
+    "transpile": "tsc src/index.ts --outDir src_ts/",
     "compile": "ncc build src/index.js --license licenses.txt",
-    "build": "npm run clean && npm i && npm run compile"
+
+    "build": "yarn run clean && yarn install && yarn run transpile && yarn run compile"
   },
   "repository": {
     "type": "git",
