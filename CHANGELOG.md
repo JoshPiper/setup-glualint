@@ -1,3 +1,13 @@
+# [0.4.0](https://github.com/JoshPiper/setup-glualint/compare/v0.3.2...v0.4.0) (2022-03-20)
+
+
+### Features
+
+* Add download and getInternalFolder to base. ([5134f4a](https://github.com/JoshPiper/setup-glualint/commit/5134f4a7828270f6598ef161f3040fbffbaf6e14))
+* Build gluafixer. ([68f3541](https://github.com/JoshPiper/setup-glualint/commit/68f354108e69adf8878b2c5b1a179887e57830e1))
+
+
+
 ## [0.3.2](https://github.com/JoshPiper/setup-glualint/compare/v0.3.1...v0.3.2) (2022-03-20)
 
 
@@ -38,15 +48,6 @@
 ### Bug Fixes
 
 * Only set the default version if empty. ([029f0c2](https://github.com/JoshPiper/setup-glualint/commit/029f0c2c73fe204c5069e955da583611028e322c))
-
-
-
-# [0.2.0](https://github.com/JoshPiper/setup-glualint/compare/v0.1.0...v0.2.0) (2022-02-14)
-
-
-### Features
-
-* Add action.yml manifest. ([6011d3d](https://github.com/JoshPiper/setup-glualint/commit/6011d3db37d3553c6e739c5627ed0050fcef5d56))
 
 
 

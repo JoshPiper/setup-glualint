@@ -8616,7 +8616,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var semver_1 = __nccwpck_require__(1383);
 var _base_1 = __nccwpck_require__(7078);
-var tool_cache_1 = __nccwpck_require__(7784);
 var child_process_1 = __nccwpck_require__(2081);
 var Version1p1p0 = /** @class */ (function (_super) {
     __extends(Version1p1p0, _super);
@@ -8627,23 +8626,12 @@ var Version1p1p0 = /** @class */ (function (_super) {
     }
     Version1p1p0.setup = function (version, platform) {
         return __awaiter(this, void 0, void 0, function () {
-            var downloadURL, downloadPath, downloadFolder;
+            var downloadFolder;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        downloadURL = this.getCodeDownloadURL(version);
-                        console.log("downloading ".concat(downloadURL));
-                        return [4 /*yield*/, (0, tool_cache_1.downloadTool)(downloadURL)];
-                    case 1:
-                        downloadPath = _a.sent();
-                        console.log("downloaded ".concat(downloadPath));
-                        return [4 /*yield*/, (0, tool_cache_1.extractZip)(downloadPath)];
-                    case 2:
-                        downloadFolder = _a.sent();
-                        console.log("extracted ".concat(downloadFolder));
-                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
-                        return [2 /*return*/];
-                }
+                downloadFolder = this.download(version);
+                console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
+                console.log((0, child_process_1.execSync)("cabel build").toString());
+                return [2 /*return*/];
             });
         });
     };
@@ -8697,6 +8685,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var semver_1 = __nccwpck_require__(1383);
+var tool_cache_1 = __nccwpck_require__(7784);
 var LintVersion = /** @class */ (function () {
     function LintVersion() {
     }
@@ -8719,8 +8708,30 @@ var LintVersion = /** @class */ (function () {
             });
         });
     };
+    LintVersion.download = function (version) {
+        return __awaiter(this, void 0, void 0, function () {
+            var downloadURL, downloadPath, downloadFolder, downloadSubfolder;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        downloadURL = this.getCodeDownloadURL(version);
+                        return [4 /*yield*/, (0, tool_cache_1.downloadTool)(downloadURL)];
+                    case 1:
+                        downloadPath = _a.sent();
+                        return [4 /*yield*/, (0, tool_cache_1.extractZip)(downloadPath)];
+                    case 2:
+                        downloadFolder = _a.sent();
+                        downloadSubfolder = this.getInternalFolder(version);
+                        return [2 /*return*/, "".concat(downloadFolder, "/").concat(downloadSubfolder)];
+                }
+            });
+        });
+    };
     LintVersion.getCodeDownloadURL = function (version) {
         return "https://github.com/FPtje/GLuaFixer/archive/refs/tags/".concat(version, ".zip");
+    };
+    LintVersion.getInternalFolder = function (version) {
+        return "GluaFixer-".concat(version);
     };
     return LintVersion;
 }());
