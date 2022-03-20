@@ -13,6 +13,6 @@ export default class Version1p1p0 extends LintVersion {
         console.log(`downloaded ${downloadPath}`)
         const downloadFolder = await extractZip(downloadPath)
         console.log(`extracted ${downloadFolder}`)
-        console.log(execSync(`ls ${downloadFolder}`))
+        console.log(execSync(`ls ${downloadFolder}`).toString())
     }
 }
