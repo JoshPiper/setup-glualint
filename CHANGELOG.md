@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/JoshPiper/setup-glualint/compare/v0.3.1...v0.3.2) (2022-03-20)
+
+
+### Bug Fixes
+
+* Decode the buffer. ([7db9bed](https://github.com/JoshPiper/setup-glualint/commit/7db9bed9ce7f50fddc611e9e6ea43853df21495b))
+
+
+
 ## [0.3.1](https://github.com/JoshPiper/setup-glualint/compare/v0.3.0...v0.3.1) (2022-03-20)
 
 
@@ -38,15 +47,6 @@
 ### Features
 
 * Add action.yml manifest. ([6011d3d](https://github.com/JoshPiper/setup-glualint/commit/6011d3db37d3553c6e739c5627ed0050fcef5d56))
-
-
-
-# [0.1.0](https://github.com/JoshPiper/setup-glualint/compare/83ee1c86991ecce8bb1aa8e2e3037b29313e6aa5...v0.1.0) (2022-02-14)
-
-
-### Features
-
-* Add installer. ([83ee1c8](https://github.com/JoshPiper/setup-glualint/commit/83ee1c86991ecce8bb1aa8e2e3037b29313e6aa5))
 
 
 

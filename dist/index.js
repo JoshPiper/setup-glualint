@@ -8641,7 +8641,7 @@ var Version1p1p0 = /** @class */ (function (_super) {
                     case 2:
                         downloadFolder = _a.sent();
                         console.log("extracted ".concat(downloadFolder));
-                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)));
+                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
                         return [2 /*return*/];
                 }
             });
