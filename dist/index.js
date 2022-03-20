@@ -8633,8 +8633,10 @@ var Version1p1p0 = /** @class */ (function (_super) {
                     case 1:
                         downloadFolder = _a.sent();
                         console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)).toString());
-                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder, "/").concat(this.getInternalFolder(version))).toString());
-                        console.log((0, child_process_1.execSync)("cabel build").toString());
+                        console.log((0, child_process_1.execSync)("cabel build", {
+                            cwd: downloadFolder,
+                            encoding: "utf-8"
+                        }));
                         return [2 /*return*/];
                 }
             });
@@ -8727,7 +8729,7 @@ var LintVersion = /** @class */ (function () {
                     case 2:
                         downloadFolder = _a.sent();
                         downloadSubfolder = this.getInternalFolder(version);
-                        return [2 /*return*/, "".concat(downloadFolder)];
+                        return [2 /*return*/, "".concat(downloadFolder, "/").concat(downloadSubfolder)];
                 }
             });
         });
@@ -8736,7 +8738,7 @@ var LintVersion = /** @class */ (function () {
         return "https://github.com/FPtje/GLuaFixer/archive/refs/tags/".concat(version, ".zip");
     };
     LintVersion.getInternalFolder = function (version) {
-        return "GluaFixer-".concat(version);
+        return "GLuaFixer-".concat(version);
     };
     return LintVersion;
 }());

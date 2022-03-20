@@ -1,3 +1,13 @@
+## [0.4.3](https://github.com/JoshPiper/setup-glualint/compare/v0.4.2...v0.4.3) (2022-03-20)
+
+
+### Bug Fixes
+
+* Capital L for GLua. ([b019d08](https://github.com/JoshPiper/setup-glualint/commit/b019d080ff750228228daef0585bcc229614f406))
+* Rollback last fix, compile with cabel. ([b51e4a8](https://github.com/JoshPiper/setup-glualint/commit/b51e4a831f3cdb70b7314a9f97c21d4b446571e2))
+
+
+
 ## [0.4.2](https://github.com/JoshPiper/setup-glualint/compare/v0.4.1...v0.4.2) (2022-03-20)
 
 
@@ -32,15 +42,6 @@
 ### Bug Fixes
 
 * Decode the buffer. ([7db9bed](https://github.com/JoshPiper/setup-glualint/commit/7db9bed9ce7f50fddc611e9e6ea43853df21495b))
-
-
-
-## [0.3.1](https://github.com/JoshPiper/setup-glualint/compare/v0.3.0...v0.3.1) (2022-03-20)
-
-
-### Bug Fixes
-
-* Properly await. ([4c116c5](https://github.com/JoshPiper/setup-glualint/commit/4c116c5855fc81c4cd6cf6b9ea015b14de2fc258))
 
 
 
