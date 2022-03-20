@@ -31,6 +31,7 @@ async function main(){
 	const downloadFolder = await tc.extractZip(downloadPath)
 	const downloadCache = await tc.cacheDir(downloadFolder, "glualint", version)
 	core.addPath(downloadCache)
+
 	return 0
 }
 
