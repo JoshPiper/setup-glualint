@@ -8466,6 +8466,262 @@ try {
 
 /***/ }),
 
+/***/ 3356:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+exports.__esModule = true;
+var _1_1_0_1 = __nccwpck_require__(1484);
+var core = __nccwpck_require__(2186);
+var tc = __nccwpck_require__(7784);
+var _a = __nccwpck_require__(1383), SemVer = _a.SemVer, satisfies = _a.satisfies;
+function main() {
+    return __awaiter(this, void 0, void 0, function () {
+        var version, platform, downloadURL, downloadPath, downloadFolder, downloadCache;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    version = core.getInput('version', { required: false, trimWhitespace: true });
+                    // if (version === "" || version === null || version === undefined){
+                    // 	version = "1.16.1"
+                    // }
+                    version = "1.1.0";
+                    switch (process.platform) {
+                        case "win32":
+                            platform = "Windows";
+                            break;
+                        case "linux":
+                            platform = "linux-stripped";
+                            break;
+                        default:
+                            core.setFailed("Unsupported Platform: ".concat(process.platform));
+                            return [2 /*return*/, 1];
+                    }
+                    _1_1_0_1["default"].setup(new SemVer(version), process.platform);
+                    downloadURL = "https://github.com/FPtje/GLuaFixer/releases/download/".concat(version, "/glualint-").concat(version, "-").concat(platform, ".zip");
+                    return [4 /*yield*/, tc.downloadTool(downloadURL)];
+                case 1:
+                    downloadPath = _a.sent();
+                    return [4 /*yield*/, tc.extractZip(downloadPath)];
+                case 2:
+                    downloadFolder = _a.sent();
+                    return [4 /*yield*/, tc.cacheDir(downloadFolder, "glualint", version)];
+                case 3:
+                    downloadCache = _a.sent();
+                    core.addPath(downloadCache);
+                    return [2 /*return*/, 0];
+            }
+        });
+    });
+}
+main()
+    .then(function (code) { return process.exit(code); });
+
+
+/***/ }),
+
+/***/ 1484:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+exports.__esModule = true;
+var semver_1 = __nccwpck_require__(1383);
+var _base_1 = __nccwpck_require__(7078);
+var tool_cache_1 = __nccwpck_require__(7784);
+var child_process_1 = __nccwpck_require__(2081);
+var Version1p1p0 = /** @class */ (function (_super) {
+    __extends(Version1p1p0, _super);
+    function Version1p1p0() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.exact = new semver_1.SemVer("1.1.0");
+        return _this;
+    }
+    Version1p1p0.setup = function (version, platform) {
+        return __awaiter(this, void 0, void 0, function () {
+            var downloadPath, downloadFolder;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, (0, tool_cache_1.downloadTool)(this.getCodeDownloadURL(version))];
+                    case 1:
+                        downloadPath = _a.sent();
+                        downloadFolder = (0, tool_cache_1.extractZip)(downloadPath);
+                        console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder)));
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return Version1p1p0;
+}(_base_1["default"]));
+exports["default"] = Version1p1p0;
+
+
+/***/ }),
+
+/***/ 7078:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+exports.__esModule = true;
+var semver_1 = __nccwpck_require__(1383);
+var LintVersion = /** @class */ (function () {
+    function LintVersion() {
+    }
+    LintVersion.matches = function (version) {
+        if (this.exact !== null) {
+            return (0, semver_1.eq)(version, this.exact);
+        }
+        if (this.minimum !== null && (0, semver_1.lt)(version, this.minimum)) {
+            return false;
+        }
+        if (this.maxiumum !== null && (0, semver_1.gt)(version, this.minimum)) {
+            return false;
+        }
+        return true;
+    };
+    LintVersion.setup = function (version, platform) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                throw "Not Implemented";
+            });
+        });
+    };
+    LintVersion.getCodeDownloadURL = function (version) {
+        return "https://github.com/FPtje/GLuaFixer/archive/refs/tags/".concat(version, ".zip");
+    };
+    return LintVersion;
+}());
+exports["default"] = LintVersion;
+
+
+/***/ }),
+
 /***/ 9491:
 /***/ ((module) => {
 
@@ -8624,50 +8880,12 @@ module.exports = require("util");
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-const core = __nccwpck_require__(2186)
-const tc = __nccwpck_require__(7784)
-const {satisfies} = __nccwpck_require__(1383)
-
-async function main(){
-	let version = core.getInput('version', {required: false, trimWhitespace: true})
-	if (version === "" || version === null || version === undefined){
-		version = "1.16.1"
-	}
-
-	let platform
-	switch (process.platform){
-		case "win32":
-			platform = "Windows"
-			break
-		case "linux":
-			platform = "linux-stripped"
-			break
-		default:
-			core.setFailed(`Unsupported Platform: ${process.platform}`)
-			return 1
-	}
-
-	if (!satisfies(version, ">=1.16.1")){
-		core.setFailed(`Minimum supported glualint is 1.16.1`)
-		return 1
-	}
-
-	const downloadURL = `https://github.com/FPtje/GLuaFixer/releases/download/${version}/glualint-${version}-${platform}.zip`
-	const downloadPath = await tc.downloadTool(downloadURL)
-	const downloadFolder = await tc.extractZip(downloadPath)
-	const downloadCache = await tc.cacheDir(downloadFolder, "glualint", version)
-	core.addPath(downloadCache)
-	return 0
-}
-
-main()
-	.then((code) => process.exit(code))
-
-})();
-
-module.exports = __webpack_exports__;
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __nccwpck_require__(3356);
+/******/ 	module.exports = __webpack_exports__;
+/******/ 	
 /******/ })()
 ;

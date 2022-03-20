@@ -1,3 +1,19 @@
+# [0.3.0](https://github.com/JoshPiper/setup-glualint/compare/v0.2.1...v0.3.0) (2022-03-20)
+
+
+### Bug Fixes
+
+* getCodeDownloadURL is static. ([f89406a](https://github.com/JoshPiper/setup-glualint/commit/f89406a798473fedca26b95a912d6581e8bb63d9))
+* Staticness. ([e717882](https://github.com/JoshPiper/setup-glualint/commit/e71788229d417807590993e3c74f30c69be37ef4))
+
+
+### Features
+
+* Add versions. ([46cd395](https://github.com/JoshPiper/setup-glualint/commit/46cd39506860fced8c2f05a7d08566cebee7e994))
+* Use a version class. ([daae1ec](https://github.com/JoshPiper/setup-glualint/commit/daae1ec62bf0d54f0d2c35754a85d1c1d2ad407f))
+
+
+
 ## [0.2.1](https://github.com/JoshPiper/setup-glualint/compare/v0.2.0...v0.2.1) (2022-02-14)
 
 
