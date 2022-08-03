@@ -20,15 +20,11 @@ export default class Version1p1p0 extends LintVersion {
             cwd: downloadFolder,
             encoding: "utf-8"
         }))
-        console.log(execSync('locate \'*.pc\' | grep gtk', {
+        console.log(execSync("PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig cabal update", {
             cwd: downloadFolder,
             encoding: "utf-8"
         }))
-        console.log(execSync("cabal update", {
-            cwd: downloadFolder,
-            encoding: "utf-8"
-        }))
-        console.log(execSync(`cabal build`, {
+        console.log(execSync(`PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig cabal build`, {
             cwd: downloadFolder,
             encoding: "utf-8"
         }))
