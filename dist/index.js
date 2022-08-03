@@ -8635,6 +8635,7 @@ var Version1p1p0 = /** @class */ (function (_super) {
                         console.log((0, child_process_1.execSync)("ls ".concat(downloadFolder), {
                             encoding: "utf-8"
                         }));
+                        console.log((0, child_process_1.execSync)('sudo apt-get install -y libgtk-3-dev'));
                         console.log((0, child_process_1.execSync)("cabal update", {
                             cwd: downloadFolder,
                             encoding: "utf-8"

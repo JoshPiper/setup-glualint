@@ -1,3 +1,12 @@
+## [0.4.6](https://github.com/JoshPiper/setup-glualint/compare/v0.4.5...v0.4.6) (2022-08-03)
+
+
+### Bug Fixes
+
+* When installing 1.1.0, install libgtk-3-dev. ([642d53a](https://github.com/JoshPiper/setup-glualint/commit/642d53a2bba26f325f443c3b70d796d88b17335d))
+
+
+
 ## [0.4.5](https://github.com/JoshPiper/setup-glualint/compare/v0.4.4...v0.4.5) (2022-03-20)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * Internal folder not accessable? ([b69a1c5](https://github.com/JoshPiper/setup-glualint/commit/b69a1c586a53c0a90d6cfcc2b4c81bdb85a30581))
-
-
-
-## [0.4.1](https://github.com/JoshPiper/setup-glualint/compare/v0.4.0...v0.4.1) (2022-03-20)
-
-
-### Bug Fixes
-
-* Needs to be awaited. ([0a8515e](https://github.com/JoshPiper/setup-glualint/commit/0a8515e2c3904d2df5e28a86de0478735527155d))
 
 
 
