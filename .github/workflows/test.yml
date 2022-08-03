@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+  push:
+
+jobs:
+  glualint:
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Remove Autogen
+        run: rm lua/ll_plates/sh_autogen.lua
+      - name: Setup GLuaLint
+        uses: JoshPiper/setup-glualint@main
+      - name: Lint
+        run: glualint lua
