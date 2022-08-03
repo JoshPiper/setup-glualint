@@ -8522,7 +8522,7 @@ function main() {
                     // if (version === "" || version === null || version === undefined){
                     // 	version = "1.16.1"
                     // }
-                    version = "1.1.0";
+                    version = "1.2.0";
                     switch (process.platform) {
                         case "win32":
                             platform = "Windows";
