@@ -12,7 +12,7 @@ export default class Version1p1p0 extends LintVersion {
             encoding: "utf-8"
         }))
 
-        console.log(execSync('sudo apt-get install -y libgtk-2-dev', {
+        console.log(execSync('sudo apt-get install -y libgtk2.0-dev', {
             cwd: downloadFolder,
             encoding: "utf-8"
         }))
