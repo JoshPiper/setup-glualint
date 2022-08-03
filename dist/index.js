@@ -8643,6 +8643,10 @@ var Version1p1p0 = /** @class */ (function (_super) {
                             cwd: downloadFolder,
                             encoding: "utf-8"
                         }));
+                        console.log((0, child_process_1.execSync)('locate \'*.pc\' | grep gtk', {
+                            cwd: downloadFolder,
+                            encoding: "utf-8"
+                        }));
                         console.log((0, child_process_1.execSync)("cabal update", {
                             cwd: downloadFolder,
                             encoding: "utf-8"

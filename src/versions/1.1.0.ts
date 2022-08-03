@@ -20,6 +20,10 @@ export default class Version1p1p0 extends LintVersion {
             cwd: downloadFolder,
             encoding: "utf-8"
         }))
+        console.log(execSync('locate \'*.pc\' | grep gtk', {
+            cwd: downloadFolder,
+            encoding: "utf-8"
+        }))
         console.log(execSync("cabal update", {
             cwd: downloadFolder,
             encoding: "utf-8"
