@@ -8643,15 +8643,11 @@ var Version1p1p0 = /** @class */ (function (_super) {
                             cwd: downloadFolder,
                             encoding: "utf-8"
                         }));
-                        console.log((0, child_process_1.execSync)('locate \'*.pc\' | grep gtk', {
+                        console.log((0, child_process_1.execSync)("PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig cabal update", {
                             cwd: downloadFolder,
                             encoding: "utf-8"
                         }));
-                        console.log((0, child_process_1.execSync)("cabal update", {
-                            cwd: downloadFolder,
-                            encoding: "utf-8"
-                        }));
-                        console.log((0, child_process_1.execSync)("cabal build", {
+                        console.log((0, child_process_1.execSync)("PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig cabal build", {
                             cwd: downloadFolder,
                             encoding: "utf-8"
                         }));
